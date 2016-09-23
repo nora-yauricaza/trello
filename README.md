@@ -5,6 +5,8 @@ Un elemento en el HTML con el mensaje "Añadir una lista", que al dar click mues
 
 ![](http://3.1m.yt/UokoRj.jpg)
 
+![](http://3.1m.yt/hz9lAO.jpg)
+
 VERSIÓN 0.0.2
 Mostrar en el HTML, el texto ingresado al dar click en el botón de "Guardar" del formulario (como si fuera título de la lista).
 Debajo del título, mostrar el mensaje clickeable de "Añadir una tarjea".
