@@ -6,7 +6,6 @@ window.addEventListener("load",function(){
 		showFormulario();
 	});
 
-
 	function hiddenElement(){
 		var padre=document.getElementById("padre");
 		var hijo=document.getElementById("lista");
@@ -16,43 +15,45 @@ window.addEventListener("load",function(){
 	function showFormulario(){
 		var padre=document.getElementById("padre");
 		var form=document.createElement("form");
-		padre.appendChild(form);
-
 		var input=document.createElement("input");
-		form.appendChild(input);
-
 		var button= document.createElement("button");
+		padre.appendChild(form);
+		form.appendChild(input);
 		form.appendChild(button);
 		button.innerText="Guardar";
+		button.type="button";
 		button.setAttribute("id", "button");
 		button.classList.add("boton");
-		button.classList.add("boton:hover");
 		button.classList.add("icon-cross");
+		form.classList.add("formulario");
 
-
-		var buttonAgregado = document.getElementById("button");
-		buttonAgregado.addEventListener("click", function() {
-
-    });
-
-
-	function createListado() {
-		var input=input.value;
-		var divContador=document.createElement("div");
-		var contenedor=document.getElementById("contenedor");
+		button.addEventListener("click", function(){
+		form.style.display="none";
+		createListado(input.value);
+		});
+    
+	function createListado(value) {
+		var divContenedorGrande=document.createElement("div");
+		var divContenedor=document.createElement("div");
 		var divElemento=document.createElement("div");
+		var divtarjeta=document.createElement("div");
+		var divA= document.createElement("a");
 		var divListado=document.createElement("div");
-		
-		contenedor.insertBefore(divContador,form);
-		divContador.appendChild(divListado);
-		divContador.appendChild(divElemento);
-		div.Listado.textContent=input;
-		divListado.value="";
-		}
+		document.getElementById("padre").appendChild(divContenedorGrande);
+		divContenedorGrande.appendChild(divContenedor);
+		divContenedor.appendChild(divElemento);
+		divContenedor.appendChild(divtarjeta);
+		divtarjeta.appendChild(divA);
+		divtarjeta = document.createTextNode("Añadir una tarjeta...");
+		divContenedor.appendChild(divListado);
 
-		function addListado(){
-			var addListado=document.getElementById("addListado");
-
+		divContenedorGrande.classList.add("divContenedorGrande");
+		divListado.classList.add("divListado")
+		divContenedor.classList.add("contenedor");
+		divElemento.classList.add("elemento");
+		divA.classList.add("a");
+		divA.appendChild(document.createTextNode(value));
+		divContenedor.appendChild(divtarjeta);		
 		}
 	}
 });
